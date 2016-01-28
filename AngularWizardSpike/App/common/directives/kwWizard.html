@@ -1,0 +1,36 @@
+﻿<div id="form-container">
+
+    <div class="page-header text-center">
+        <h3>Create Wizard Level</h3>
+        <h4>{{workflow.name}}</h4>
+
+        <ul ng-repeat="step in workflow.steps" class="nav">
+            <li  ui-sref-active="active">{{step.name}}</li>
+        </ul>
+    </div>
+
+    <form id="signup-form" name="wizardForm" ng-submit="processForm(wizardForm)" novalidate="">
+
+        <div id="form-views" ui-view></div>
+
+        <div class="form-group" ui-view="actions">
+            <button class="btn previous-button btn-action-navigate pull-left" ng-if="workFlow.CurrentStep.Showback || true">
+                back
+            </button>
+            <button type="submit" class="btn previous-button btn-action-navigate pull-left"
+                    ng-if="workFlow.CurrentStep.ShowNext || true">
+                next
+            </button>
+        </div>
+    </form>
+
+</div>
+
+
+<pre style="text-align: left; margin-top: 20px; max-height: 400px; overflow-y: scroll">
+ {{wizardForm|json}} 
+</pre>
+
+<pre style="text-align: left; margin-top: 20px; max-height: 400px; overflow-y: scroll">
+ {{workflow.modelData|json}} 
+</pre>

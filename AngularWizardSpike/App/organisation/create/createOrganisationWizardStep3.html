@@ -1,0 +1,15 @@
+﻿<div class="step">
+    <div class="form-group">
+        <label for="colour">Colour</label>
+        <input type="text" class="form-control" name="colour" ng-model="workflow.modelData.colour" ng-required="true">
+    </div>
+
+    <button class="btn previous-button btn-action-navigate pull-left" ng-if="canGoBack()" ng-click="executeAction('back')">
+                back
+            </button>
+            <button type="submit" class="btn previous-button btn-action-navigate pull-left">
+                next
+            </button>
+
+
+</div>

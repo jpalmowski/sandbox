@@ -1,0 +1,27 @@
+﻿
+
+<div id="form-container">
+
+    <div class="page-header text-center">
+        <h3>Create Wizard Level</h3>
+        <h4>{{workflow.name}}</h4>
+
+        <!--<div id="status-buttons" class="text-center">
+            <a ui-sref-active="active" ui-sref=".profile"><span>1</span> Profile</a>
+            <a ui-sref-active="active" ui-sref=".interests"><span>2</span> Interests</a>
+            <a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a>
+        </div>-->
+    </div>
+
+    <!-- use ng-submit to catch the form submission and use our Angular function -->
+    <form id="signup-form" ng-submit="processForm()">
+        <!-- our nested state views will be injected here -->
+        <div id="form-views" ui-view></div>
+    </form>
+
+</div>
+
+
+<pre style="text-align: left; margin-top: 20px; max-height: 400px; overflow-y: scroll">
+ {{workflow.modelData|json}} 
+</pre>

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="App/app.css" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+</head>
+<body ng-app="app">
+
+    <div class="container">
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Test Stuff</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                        <li ui-sref-active="active"><a ui-sref="abstract">Test Default Abstract State</a></li>
+                        <li ui-sref-active="active"><a ui-sref="create-organisation">Create Organisation</a></li>
+                        <!--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                    <!--<form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>-->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div ui-view>
+
+        </div>
+
+
+
+        <!--<div>Current state Nav</div>
+
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+
+        </form>-->
+
+    </div>
+
+
+
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/angular-messages.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+    <script src="Scripts/angular-ui-router-default.js"></script>
+
+    <script src="App/app.js"></script>
+    <script src="App/common/directives/app.common.directives.module.js"></script>
+    <script src="App/organisation/organisation.module.js"></script>
+    <script src="App/organisation/create/createOrganisation.module.js"></script>
+    <script src="App/common/homeController.js"></script>
+
+
+    <script src="App/common/directives/kwWizard.js"></script>
+    <script src="App/common/directives/kwTopBit.js"></script>
+    <script src="App/common/directives/kwBottomBit.js"></script>
+    <script src="App/common/directives/kwCollectionEditor.js"></script>
+    <script src="App/common/directives/kwPlaceholder.js"></script>
+
+    <script src="App/organisation/organisation.routes.js"></script>
+    <script src="App/organisation/create/createOrganisation.routes.js"></script>
+
+    <script src="App/organisation/create/createOrganisationWizardController.js"></script>
+
+    <script src="App/organisation/edit/editOrganisationWizardController.js"></script>
+    <script src="App/organisation/view/viewOrganisationController.js"></script>
+
+
+
+</body>
+</html>
