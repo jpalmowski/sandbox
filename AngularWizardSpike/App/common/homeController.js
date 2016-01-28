@@ -10,6 +10,15 @@
                 console.log('click');
             }
 
+            $scope.validatePerson = function(person) {
+                console.log(person);
+            }
+
+            $scope.validatePerson = function (person) {
+                console.log(person);
+            }
+
+
         });
 
 })();

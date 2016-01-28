@@ -14,7 +14,9 @@
                 minimumItems: '=',
                 maximumItems: '=',
                 itemTypeName: '@',
-                destinationCollection: '='
+                destinationCollection: '=',
+                //canCreate:
+
             },
             restrict: 'EA',
             templateUrl: '/App/common/directives/kwCollectionEditor.tpl.html'
@@ -23,14 +25,24 @@
         return directive;
 
         function ctrl($scope) {
-            $scope.create = function () {
-                var newPerson =  angular.copy($scope.$$childHead[$scope.itemTypeName]);
-                $scope.destinationCollection.push(newPerson);
-                $scope.$$childHead[$scope.itemTypeName] = {};
-            }
+
+            $scope.colAddItem = function(form) {
+                console.log('fff');
+            };
+
+            this.createInCol = function(param) {
+                var scope = $scope;
+                console.log(param);
+            };
+            //$scope.create = function () {
+            //    var newPerson =  angular.copy($scope.$$childHead[$scope.itemTypeName]);
+            //    $scope.destinationCollection.push(newPerson);
+            //    $scope.$$childHead[$scope.itemTypeName] = {};
+            //}
         }
 
         function link(scope, element, attrs, ctrl, transcludeFn) {
+          
             //check that itemTypeName is set
             //check that destination collection is array-like
 

@@ -1,41 +1,43 @@
 ﻿<div id="form-container">
 
     <div>
-        <kw-collection-editor minimum-items="1"
+        <!--<kw-collection-editor minimum-items="1"
                               maximum-items="3"
                               item-type-name="person"
-                              destination-collection="people">
+                              destination-collection="people">-->
 
-            <kw-top-bit item-type-name="person" destination-collection="people">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>Partner</h3>
-                        <div class="form-group">
+            <!--<kw-top-bit>
 
-                            <input type="text"
-                                   ng-required="true"
-                                   name="first"
-                                   id="first"
-                                   ng-model="person.firstName"/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Partner</h3>
+                            <div class="form-group">
 
-                            <input type="text"
-                                   ng-required="true"
-                                   name="last"
-                                   id="last"
-                                   ng-model="person.lastName"/>
+                                <input type="text"
+                                       ng-required="true"
+                                       name="first"
+                                       id="first"
+                                       ng-model="person.firstName" />
+
+                                <input type="text"
+                                       ng-required="true"
+                                       name="last"
+                                       id="last"
+                                       ng-model="person.lastName" />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </kw-top-bit>
 
-            <kw-bottom-bit>
+            </kw-top-bit>-->
 
+        <kw-bottom-bit min="2"
+                       max="5"
+                       item-type-name="person"
+                       destination-collection="people"
+                       validate="validatePerson"
+                       update="updatePerson">
 
-
-            </kw-bottom-bit>
-
-            <ul ng-repeat="person in people track by $index">
-                <li>
+                <div transclude-to="display-view">
                     <kw-placeholder ng-required="true"
                                     ng-model="person"
                                     display-expression="{{person.firstName + ' ' + person.lastName}}"
@@ -43,16 +45,57 @@
                                     ng-click="clickMe()"
                                     placeholder-text="placeholder text">
                     </kw-placeholder>
-                </li>
+                </div>
 
-            </ul>
+            <div transclude-to="edit-view">
+                
 
-        </kw-collection-editor>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Partner</h3>
+                            <div class="form-group">
+
+                                <input type="text"
+                                       ng-required="true"
+                                       name="first"
+                                       id="first"
+                                       ng-model="person.firstName" />
+
+                                <input type="text"
+                                       ng-required="true"
+                                       name="last"
+                                       id="last"
+                                       ng-model="person.lastName" />
+                            </div>
+                        </div>
+                    </div>
+
+              
+                
+            </div>
+
+
+            </kw-bottom-bit>
+
+
+
+        <!--</kw-collection-editor>-->
     </div>
 
+    <!--<ul ng-repeat="person in people track by $index">
+        <li>
+            <kw-placeholder ng-required="true"
+                            ng-model="person"
+                            display-expression="{{person.firstName + ' ' + person.lastName}}"
+                            name="zz"
+                            ng-click="clickMe()"
+                            placeholder-text="placeholder text">
+            </kw-placeholder>
+        </li>
+
+    </ul>-->
     <!--<pre>{{people|json}}</pre>
     <pre>{{formEdit|json}}</pre>-->
-
 </div>
 
 

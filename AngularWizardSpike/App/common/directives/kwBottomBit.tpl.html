@@ -1,9 +1,14 @@
 ﻿<div>
     <h4>Bottom bit</h4>
-    <!--<form name="formAdd" ng-submit="formAdd.$valid && create(formAdd)" novalidate="">
 
+    <div transclude-id="display-view"></div>
+
+    <form name="formEdit" ng-submit="formEdit.$valid && update(formEdit)" novalidate="">
+
+        <div transclude-id="edit-view"></div>
         <ng-transclude></ng-transclude>
 
         <button type="submit">Add</button>
-    </form>-->
+    </form>
+
 </div>

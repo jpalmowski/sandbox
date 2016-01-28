@@ -71,15 +71,15 @@
             console.groupEnd();
         });
 
-        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-            //console.log('$stateChangeSuccess to ' + toState.name + '- fired once the state transition is complete.');
-            //notify.info('State tranistion:' + fromState.name + ' -> ' + toState.name + ' complete', event.name);
-            console.group(event.name);
-            console.log('Event:', event);
-            console.log('ToParams:', toParams);
-            console.log('fromParams:', fromParams);
-            console.groupEnd();
-        });
+        //$rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        //    //console.log('$stateChangeSuccess to ' + toState.name + '- fired once the state transition is complete.');
+        //    //notify.info('State tranistion:' + fromState.name + ' -> ' + toState.name + ' complete', event.name);
+        //    console.group(event.name);
+        //    console.log('Event:', event);
+        //    console.log('ToParams:', toParams);
+        //    console.log('fromParams:', fromParams);
+        //    console.groupEnd();
+        //});
 
         $rootScope.$on('$stateNotFound', function (event, unfoundState, fromState, fromParams) {
             //console.log('$stateNotFound ' + unfoundState.to + '  - fired when a state cannot be found by its name.');
